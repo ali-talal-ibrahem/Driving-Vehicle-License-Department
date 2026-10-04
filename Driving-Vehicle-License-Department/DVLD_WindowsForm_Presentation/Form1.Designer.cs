@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.ctrlSimpleClick1 = new DVLD_WindowsForm_Presentation.ctrlSimpleClick();
+            this.ctrlSimpleClick2 = new DVLD_WindowsForm_Presentation.ctrlSimpleClick();
+            this.ctrlSimpleClick3 = new DVLD_WindowsForm_Presentation.ctrlSimpleClick();
             this.SuspendLayout();
             // 
             // ctrlSimpleClick1
             // 
-            this.ctrlSimpleClick1.Location = new System.Drawing.Point(12, 12);
+            this.ctrlSimpleClick1.Location = new System.Drawing.Point(24, 12);
             this.ctrlSimpleClick1.Name = "ctrlSimpleClick1";
-            this.ctrlSimpleClick1.Size = new System.Drawing.Size(230, 151);
+            this.ctrlSimpleClick1.Size = new System.Drawing.Size(230, 119);
             this.ctrlSimpleClick1.TabIndex = 0;
             this.ctrlSimpleClick1.OnCalcComplet += new System.Action<int>(this.ctrlSimpleClick1_OnCalcComplet);
             // 
@@ -54,5 +56,7 @@
         #endregion
 
         private ctrlSimpleClick ctrlSimpleClick1;
+        private ctrlSimpleClick ctrlSimpleClick2;
+        private ctrlSimpleClick ctrlSimpleClick3;
     }
 }
