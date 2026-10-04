@@ -16,20 +16,5 @@ namespace DVLD_WindowsForm_Presentation
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form2 frm2 = new Form2();
-            frm2.DataBack += Form2_DataBack;
-            frm2.ShowDialog();
-        }
-
-        private void Form2_DataBack(object sender , int PersonID,string PersonName) 
-        {
-            textBox1.Text = PersonID.ToString();
-            textBox2.Text = PersonName;
-        
-        }
-
     }
 }
