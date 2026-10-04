@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{919BDA37-B443-4106-A754-8414A5A049B5}</ProjectGuid>
+    <ProjectGuid>{8C2929D9-6300-4A25-B549-9CBF3AED90D1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Driving_Vehicle_License_Department</RootNamespace>
     <AssemblyName>Driving-Vehicle-License-Department</AssemblyName>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestFile.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
