@@ -1,3 +1,5 @@
 <Solution>
-  <Project Path="Driving-Vehicle-License-Department.csproj" />
+  <Project Path="DVLD_Business/DVLD_Business.csproj" />
+  <Project Path="DVLD_ConsoleApp_Presentation/DVLD_ConsoleApp_Presentation.csproj" />
+  <Project Path="DVLD_DataAccess/DVLD_DataAccess.csproj" />
 </Solution>
