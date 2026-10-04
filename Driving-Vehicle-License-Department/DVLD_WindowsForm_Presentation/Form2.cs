@@ -13,17 +13,23 @@ namespace DVLD_WindowsForm_Presentation
     public partial class Form2 : Form
     {
 
-        private int _PersonId;
+        public delegate void DataBackEventHandler(object sender, int PersonID);
+        public event DataBackEventHandler DataBack;
 
-        public Form2(int PersonId)
+
+        public Form2()
         {
             InitializeComponent();
-            _PersonId = PersonId;
+
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            label1.Text = $"Person ID: {_PersonId}";
+            int PersonID = int.Parse(textBox1.Text);
+
+            DataBack?.Invoke(this, PersonID);
+
+            this.Close();
         }
     }
 }

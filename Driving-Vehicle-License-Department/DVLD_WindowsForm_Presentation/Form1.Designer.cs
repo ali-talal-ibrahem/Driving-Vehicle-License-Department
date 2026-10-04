@@ -34,20 +34,20 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(581, 53);
+            this.button1.Location = new System.Drawing.Point(68, 140);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 335);
-            this.button1.TabIndex = 1;
+            this.button1.Size = new System.Drawing.Size(233, 155);
+            this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(288, 105);
+            this.textBox1.Location = new System.Drawing.Point(375, 140);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -64,6 +64,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
     }
