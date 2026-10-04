@@ -13,7 +13,7 @@ namespace DVLD_WindowsForm_Presentation
     public partial class Form2 : Form
     {
 
-        public delegate void DataBackEventHandler(object sender, int PersonID);
+        public delegate void DataBackEventHandler(object sender, int PersonID,string PresonName);
         public event DataBackEventHandler DataBack;
 
 
@@ -26,8 +26,9 @@ namespace DVLD_WindowsForm_Presentation
         private void button1_Click(object sender, EventArgs e)
         {
             int PersonID = int.Parse(textBox1.Text);
+            string PersonName = textBox2.Text;
 
-            DataBack?.Invoke(this, PersonID);
+            DataBack?.Invoke(this, PersonID,PersonName);
 
             this.Close();
         }

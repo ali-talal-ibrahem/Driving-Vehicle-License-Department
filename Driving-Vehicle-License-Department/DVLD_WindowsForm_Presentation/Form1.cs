@@ -24,9 +24,10 @@ namespace DVLD_WindowsForm_Presentation
             frm2.ShowDialog();
         }
 
-        private void Form2_DataBack(object sender , int PersonID) 
+        private void Form2_DataBack(object sender , int PersonID,string PersonName) 
         {
             textBox1.Text = PersonID.ToString();
+            textBox2.Text = PersonName;
         
         }
 
