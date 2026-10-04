@@ -2,4 +2,5 @@
   <Project Path="DVLD_Business/DVLD_Business.csproj" />
   <Project Path="DVLD_ConsoleApp_Presentation/DVLD_ConsoleApp_Presentation.csproj" />
   <Project Path="DVLD_DataAccess/DVLD_DataAccess.csproj" />
+  <Project Path="DVLD_WindowsForm_Presentation/DVLD_WindowsForm_Presentation.csproj" />
 </Solution>
