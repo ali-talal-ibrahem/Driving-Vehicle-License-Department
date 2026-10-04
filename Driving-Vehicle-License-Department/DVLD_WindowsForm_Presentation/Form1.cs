@@ -16,5 +16,10 @@ namespace DVLD_WindowsForm_Presentation
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(ctrlSimpleCalc1.Result.ToString());
+        }
     }
 }
