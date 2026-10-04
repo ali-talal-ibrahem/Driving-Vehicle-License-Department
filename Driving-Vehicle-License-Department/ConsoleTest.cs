@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Driving_Vehicle_License_Department
 {
-    internal class Program
+    internal class ConsoleTest
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
