@@ -1,6 +1,6 @@
 <Solution>
-  <Project Path="DVLD_Business/DVLD_Business.csproj" />
-  <Project Path="DVLD_ConsoleApp_Presentation/DVLD_ConsoleApp_Presentation.csproj" />
-  <Project Path="DVLD_DataAccess/DVLD_DataAccess.csproj" />
-  <Project Path="DVLD_WindowsForm_Presentation/DVLD_WindowsForm_Presentation.csproj" />
+  <Project Path="DVLD_Business/DVLD_Business.csproj" Id="de8812af-bc02-4ba2-b826-963f6e78ad13" />
+  <Project Path="DVLD_ConsoleApp_Presentation/DVLD_ConsoleApp_Presentation.csproj" Id="1488f94b-e970-43cf-ba92-d312a940020e" />
+  <Project Path="DVLD_DataAccess/DVLD_DataAccess.csproj" Id="84bd32f0-a55d-434d-85cf-f2dcde422743" />
+  <Project Path="DVLD_WindowsForm_Presentation/DVLD_WindowsForm_Presentation.csproj" Id="b86a10a9-6650-425a-813d-e9d7385c144a" />
 </Solution>
