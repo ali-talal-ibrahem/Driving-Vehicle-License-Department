@@ -7,9 +7,6 @@ namespace DVLD_ConsoleApp_Presentation
     {
         static void Main(string[] args)
         {
-            string message = clsTestBus.getTestData();
-
-            Console.WriteLine(message);
 
         }
     }
