@@ -41,11 +41,11 @@
             this.dgv_PeopleInformation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_PeopleInformation.BackgroundColor = System.Drawing.Color.White;
             this.dgv_PeopleInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_PeopleInformation.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgv_PeopleInformation.Location = new System.Drawing.Point(0, 154);
+            this.dgv_PeopleInformation.GridColor = System.Drawing.Color.Silver;
+            this.dgv_PeopleInformation.Location = new System.Drawing.Point(0, 104);
             this.dgv_PeopleInformation.Name = "dgv_PeopleInformation";
             this.dgv_PeopleInformation.ReadOnly = true;
-            this.dgv_PeopleInformation.Size = new System.Drawing.Size(914, 288);
+            this.dgv_PeopleInformation.Size = new System.Drawing.Size(914, 338);
             this.dgv_PeopleInformation.TabIndex = 0;
             // 
             // lbl_ResulrPeopleCount
