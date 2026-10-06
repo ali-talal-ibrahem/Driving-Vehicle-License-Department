@@ -28,25 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlSimpleClick1 = new DVLD_WindowsForm_Presentation.ctrlSimpleClick();
             this.ctrlSimpleClick2 = new DVLD_WindowsForm_Presentation.ctrlSimpleClick();
             this.ctrlSimpleClick3 = new DVLD_WindowsForm_Presentation.ctrlSimpleClick();
             this.SuspendLayout();
             // 
-            // ctrlSimpleClick1
+            // ctrlSimpleClick2
             // 
-            this.ctrlSimpleClick1.Location = new System.Drawing.Point(24, 12);
-            this.ctrlSimpleClick1.Name = "ctrlSimpleClick1";
-            this.ctrlSimpleClick1.Size = new System.Drawing.Size(230, 119);
-            this.ctrlSimpleClick1.TabIndex = 0;
-            this.ctrlSimpleClick1.OnCalcComplet += new System.Action<int>(this.ctrlSimpleClick1_OnCalcComplet);
+            this.ctrlSimpleClick2.Location = new System.Drawing.Point(0, 0);
+            this.ctrlSimpleClick2.Name = "ctrlSimpleClick2";
+            this.ctrlSimpleClick2.Size = new System.Drawing.Size(181, 32);
+            this.ctrlSimpleClick2.TabIndex = 0;
+            // 
+            // ctrlSimpleClick3
+            // 
+            this.ctrlSimpleClick3.Location = new System.Drawing.Point(0, 0);
+            this.ctrlSimpleClick3.Name = "ctrlSimpleClick3";
+            this.ctrlSimpleClick3.Size = new System.Drawing.Size(181, 32);
+            this.ctrlSimpleClick3.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ctrlSimpleClick1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -54,8 +58,6 @@
         }
 
         #endregion
-
-        private ctrlSimpleClick ctrlSimpleClick1;
         private ctrlSimpleClick ctrlSimpleClick2;
         private ctrlSimpleClick ctrlSimpleClick3;
     }
