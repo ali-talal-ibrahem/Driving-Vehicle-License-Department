@@ -8,10 +8,6 @@
     <BuildType Solution="Default|*" Project="Release" />
     <Build Solution="Default|*" Project="false" />
   </Project>
-  <Project Path="DVLD_ConsoleApp_Presentation/DVLD_ConsoleApp_Presentation.csproj" Id="1488f94b-e970-43cf-ba92-d312a940020e">
-    <BuildType Solution="Default|*" Project="Release" />
-    <Build Solution="Default|*" Project="false" />
-  </Project>
   <Project Path="DVLD_DataAccess/DVLD_DataAccess.csproj" Id="84bd32f0-a55d-434d-85cf-f2dcde422743">
     <BuildType Solution="Default|*" Project="Release" />
     <Build Solution="Default|*" Project="false" />

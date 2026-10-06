@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD_WindowsForm_Presentation.People;
 
 namespace DVLD_WindowsForm_Presentation
 {
@@ -17,5 +18,10 @@ namespace DVLD_WindowsForm_Presentation
             InitializeComponent();
         }
 
+        private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManagePeopleForm GoForm = new frmManagePeopleForm();
+            GoForm.ShowDialog();
+        }
     }
 }

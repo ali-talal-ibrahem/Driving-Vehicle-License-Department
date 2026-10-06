@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DVLD_Business;
 using System.Windows.Forms;
 
 namespace DVLD_WindowsForm_Presentation.People
@@ -15,6 +10,18 @@ namespace DVLD_WindowsForm_Presentation.People
         public frmManagePeopleForm()
         {
             InitializeComponent();
+        }
+
+        private void _RefreshPeopleList()
+        {
+            dgv_PeopleInformation.DataSource = clsPeople.GetAllPeople();
+            int CountAllPeople = dgv_PeopleInformation.RowCount;
+            lbl_ResulrPeopleCount.Text = "Result : " + CountAllPeople.ToString();
+        }
+
+        private void frmManagePeopleForm_Load(object sender, EventArgs e)
+        {
+            _RefreshPeopleList();
         }
     }
 }
