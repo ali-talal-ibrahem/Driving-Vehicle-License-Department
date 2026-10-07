@@ -17,6 +17,7 @@ namespace DVLD_WindowsForm_Presentation.People
             dgv_PeopleInformation.DataSource = clsPeople.GetAllPeople();
             int CountAllPeople = dgv_PeopleInformation.RowCount;
             lbl_ResulrPeopleCount.Text = "Result : " + CountAllPeople.ToString();
+            cb_Filter.SelectedIndex = 0;
         }
 
         private void frmManagePeopleForm_Load(object sender, EventArgs e)
