@@ -23,5 +23,15 @@ namespace DVLD_WindowsForm_Presentation.People
         {
             _RefreshPeopleList();
         }
+
+        private void btn_AddNewPerson_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Add New Person Soon...");
+        }
+
+        private void btn_CloseForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
