@@ -64,7 +64,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(908, 503);
+            this.ClientSize = new System.Drawing.Size(908, 517);
             this.Controls.Add(this.lbl_ResulrPeopleCount);
             this.Controls.Add(this.dgv_PeopleInformation);
             this.Name = "frmManagePeopleForm";
