@@ -54,11 +54,11 @@
     <Compile Include="People\Forms\frmAdd_EditPreson.Designer.cs">
       <DependentUpon>frmAdd_EditPreson.cs</DependentUpon>
     </Compile>
-    <Compile Include="People\Controls\ctrAddNewPerosn.cs">
+    <Compile Include="People\Controls\ctrAdd_EditPerosn.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="People\Controls\ctrAddNewPerosn.Designer.cs">
-      <DependentUpon>ctrAddNewPerosn.cs</DependentUpon>
+    <Compile Include="People\Controls\ctrAdd_EditPerosn.Designer.cs">
+      <DependentUpon>ctrAdd_EditPerosn.cs</DependentUpon>
     </Compile>
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
@@ -77,8 +77,8 @@
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="People\Controls\ctrAddNewPerosn.resx">
-      <DependentUpon>ctrAddNewPerosn.cs</DependentUpon>
+    <EmbeddedResource Include="People\Controls\ctrAdd_EditPerosn.resx">
+      <DependentUpon>ctrAdd_EditPerosn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\Forms\frmAdd_EditPreson.resx">
       <DependentUpon>frmAdd_EditPreson.cs</DependentUpon>
