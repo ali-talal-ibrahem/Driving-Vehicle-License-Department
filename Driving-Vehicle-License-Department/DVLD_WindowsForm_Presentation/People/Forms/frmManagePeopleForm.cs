@@ -2,6 +2,7 @@
 using System.Data;
 using DVLD_Business;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace DVLD_WindowsForm_Presentation.People
 {
@@ -71,7 +72,15 @@ namespace DVLD_WindowsForm_Presentation.People
 
         private void txb_Filter_TextChanged(object sender, EventArgs e)
         {
+            if(string.IsNullOrEmpty(txb_Filter.Text.Trim()))
+            {
+                _RefreshPeopleList();
+                return;
+            }
 
+            string FilterColumnName = cb_Filter.SelectedItem.ToString();
+
+            dgv_PeopleInformation.DataSource = clsPeople.GetAllPeopleByFilter(FilterColumnName, txb_Filter.Text.Trim());
         }
     }
 }

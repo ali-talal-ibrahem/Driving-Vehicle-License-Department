@@ -192,7 +192,7 @@
             "NO.",
             "FirstName",
             "LastName",
-            "PhoneNumber",
+            "Phone",
             "Email",
             "Country"});
             this.cb_Filter.Location = new System.Drawing.Point(75, 70);
