@@ -28,7 +28,9 @@ namespace DVLD_WindowsForm_Presentation.People
 
         private void btn_AddNewPerson_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Add New Person Soon...");
+            frmAdd_EditPreson GoAddForm = new frmAdd_EditPreson(-1);
+            GoAddForm.ShowDialog();
+            _RefreshPeopleList();
         }
 
         private void btn_CloseForm_Click(object sender, EventArgs e)
@@ -45,12 +47,17 @@ namespace DVLD_WindowsForm_Presentation.People
 
         private void cms_AddNewPerson_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Add New Person Soon...");
+            frmAdd_EditPreson GoAddForm = new frmAdd_EditPreson(-1);
+            GoAddForm.ShowDialog();
+            _RefreshPeopleList();
         }
 
         private void cms_EditPerson_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Edit Person Soon...");
+            int PersonID = (int)dgv_PeopleInformation.CurrentRow.Cells[0].Value;
+            frmAdd_EditPreson GoEditForm = new frmAdd_EditPreson(PersonID);
+            GoEditForm.ShowDialog();
+            _RefreshPeopleList();
         }
 
         private void cms_DeletePerson_Click(object sender, EventArgs e)
@@ -72,6 +79,11 @@ namespace DVLD_WindowsForm_Presentation.People
 
         private void txb_Filter_TextChanged(object sender, EventArgs e)
         {
+            if (cb_Filter.SelectedIndex.ToString() == "PersonID" || cb_Filter.SelectedIndex.ToString() == "NO." || cb_Filter.SelectedIndex.ToString() == "Phone") { 
+                
+            }
+
+
             if(string.IsNullOrEmpty(txb_Filter.Text.Trim()))
             {
                 _RefreshPeopleList();
@@ -82,5 +94,37 @@ namespace DVLD_WindowsForm_Presentation.People
 
             dgv_PeopleInformation.DataSource = clsPeople.GetAllPeopleByFilter(FilterColumnName, txb_Filter.Text.Trim());
         }
+
+        private void txb_Filter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            string selectedFilter = cb_Filter.SelectedItem?.ToString();
+
+            if (selectedFilter == "PersonID" || selectedFilter == "Phone")
+            {
+
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+
+
+                    errorProvider1.SetError(txb_Filter, "هذا الخيار يقبل الأرقام فقط!");
+                }
+                else
+                {
+
+                    errorProvider1.SetError(txb_Filter, "");
+                }
+            }
+            else
+            {
+
+                errorProvider1.SetError(txb_Filter, "");
+            }
+        }
+    
+    
+    
+    
     }
 }

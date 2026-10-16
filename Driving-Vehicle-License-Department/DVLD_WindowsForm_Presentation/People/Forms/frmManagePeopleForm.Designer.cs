@@ -46,8 +46,10 @@
             this.cb_Filter = new System.Windows.Forms.ComboBox();
             this.txb_Filter = new System.Windows.Forms.TextBox();
             this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PeopleInformation)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_PeopleInformation
@@ -208,12 +210,17 @@
             this.txb_Filter.Size = new System.Drawing.Size(150, 29);
             this.txb_Filter.TabIndex = 6;
             this.txb_Filter.TextChanged += new System.EventHandler(this.txb_Filter_TextChanged);
+            this.txb_Filter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Filter_KeyPress);
             // 
             // sendEmailToolStripMenuItem
             // 
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
             this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmManagePeopleForm
             // 
@@ -228,12 +235,14 @@
             this.Controls.Add(this.btn_AddNewPerson);
             this.Controls.Add(this.lbl_ResulrPeopleCount);
             this.Controls.Add(this.dgv_PeopleInformation);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmManagePeopleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DVLD - Manage People";
             this.Load += new System.EventHandler(this.frmManagePeopleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PeopleInformation)).EndInit();
             this.contextMenuStrip.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +267,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem cms_SendEmail;
         private System.Windows.Forms.ToolStripMenuItem cms_CallPhone;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
