@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace DVLD_WindowsForm_Presentation
 {
-    public partial class ctrAddNewPerosn : UserControl
+    public partial class ctrAdd_EditPerosn : UserControl
     {
-        public ctrAddNewPerosn()
+        public ctrAdd_EditPerosn()
         {
             InitializeComponent();
+            dtp_DateOfBirth.MaxDate = DateTime.Now - new TimeSpan(365 * 18, 0, 0, 0);
         }
+
+
     }
 }
