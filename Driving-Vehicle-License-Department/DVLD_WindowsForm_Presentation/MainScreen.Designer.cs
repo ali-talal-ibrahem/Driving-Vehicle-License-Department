@@ -34,6 +34,7 @@
             this.friversToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,9 @@
             // 
             // applicaToolStripMenuItem
             // 
+            this.applicaToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.applicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aliToolStripMenuItem});
             this.applicaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.applicaToolStripMenuItem.Name = "applicaToolStripMenuItem";
             this.applicaToolStripMenuItem.Size = new System.Drawing.Size(99, 46);
@@ -90,6 +94,12 @@
             this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(132, 46);
             this.accountSettingsToolStripMenuItem.Text = "Account Settings";
             // 
+            // aliToolStripMenuItem
+            // 
+            this.aliToolStripMenuItem.Name = "aliToolStripMenuItem";
+            this.aliToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.aliToolStripMenuItem.Text = "Ali";
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,5 +124,6 @@
         private System.Windows.Forms.ToolStripMenuItem friversToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountSettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aliToolStripMenuItem;
     }
 }
