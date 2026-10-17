@@ -30,11 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.applicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.peopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.friversToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,15 +61,25 @@
             this.applicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aliToolStripMenuItem});
             this.applicaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.applicaToolStripMenuItem.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_gears_100;
             this.applicaToolStripMenuItem.Name = "applicaToolStripMenuItem";
-            this.applicaToolStripMenuItem.Size = new System.Drawing.Size(99, 46);
+            this.applicaToolStripMenuItem.Size = new System.Drawing.Size(115, 46);
             this.applicaToolStripMenuItem.Text = "Applications";
+            // 
+            // aliToolStripMenuItem
+            // 
+            this.aliToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.aliToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.aliToolStripMenuItem.Name = "aliToolStripMenuItem";
+            this.aliToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.aliToolStripMenuItem.Text = "Ali";
             // 
             // peopleToolStripMenuItem
             // 
             this.peopleToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.peopleToolStripMenuItem.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_user_groups_100;
             this.peopleToolStripMenuItem.Name = "peopleToolStripMenuItem";
-            this.peopleToolStripMenuItem.Size = new System.Drawing.Size(66, 46);
+            this.peopleToolStripMenuItem.Size = new System.Drawing.Size(82, 46);
             this.peopleToolStripMenuItem.Text = "People";
             this.peopleToolStripMenuItem.Click += new System.EventHandler(this.peopleToolStripMenuItem_Click);
             // 
@@ -93,12 +103,6 @@
             this.accountSettingsToolStripMenuItem.Name = "accountSettingsToolStripMenuItem";
             this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(132, 46);
             this.accountSettingsToolStripMenuItem.Text = "Account Settings";
-            // 
-            // aliToolStripMenuItem
-            // 
-            this.aliToolStripMenuItem.Name = "aliToolStripMenuItem";
-            this.aliToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
-            this.aliToolStripMenuItem.Text = "Ali";
             // 
             // MainScreen
             // 
