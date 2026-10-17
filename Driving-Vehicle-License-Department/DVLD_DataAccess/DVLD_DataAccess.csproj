@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsCountriesData.cs" />
     <Compile Include="clsDataAccessString.cs" />
     <Compile Include="clsPeopleData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
