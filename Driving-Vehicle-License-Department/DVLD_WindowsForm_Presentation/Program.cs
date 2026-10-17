@@ -17,7 +17,7 @@ namespace DVLD_WindowsForm_Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmManagePeopleForm());
+            Application.Run(new MainScreen());
         }
     }
 }
