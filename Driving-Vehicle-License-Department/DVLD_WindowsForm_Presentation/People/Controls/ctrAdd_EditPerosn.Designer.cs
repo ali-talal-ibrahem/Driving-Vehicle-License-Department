@@ -51,8 +51,9 @@
             this.dtp_DateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.lbl_PersonID = new System.Windows.Forms.Label();
             this.gb_Gendor = new System.Windows.Forms.GroupBox();
-            this.rdb_Male = new System.Windows.Forms.RadioButton();
             this.rdb_Female = new System.Windows.Forms.RadioButton();
+            this.rdb_Male = new System.Windows.Forms.RadioButton();
+            this.cb_Countries = new System.Windows.Forms.ComboBox();
             this.gb_Gendor.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -287,19 +288,6 @@
             this.gb_Gendor.TabIndex = 21;
             this.gb_Gendor.TabStop = false;
             // 
-            // rdb_Male
-            // 
-            this.rdb_Male.AutoSize = true;
-            this.rdb_Male.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rdb_Male.Font = new System.Drawing.Font("SAHAR", 10F);
-            this.rdb_Male.Location = new System.Drawing.Point(3, 10);
-            this.rdb_Male.Name = "rdb_Male";
-            this.rdb_Male.Size = new System.Drawing.Size(54, 31);
-            this.rdb_Male.TabIndex = 0;
-            this.rdb_Male.TabStop = true;
-            this.rdb_Male.Text = "Male";
-            this.rdb_Male.UseVisualStyleBackColor = true;
-            // 
             // rdb_Female
             // 
             this.rdb_Female.AutoSize = true;
@@ -313,11 +301,34 @@
             this.rdb_Female.Text = "Female";
             this.rdb_Female.UseVisualStyleBackColor = true;
             // 
+            // rdb_Male
+            // 
+            this.rdb_Male.AutoSize = true;
+            this.rdb_Male.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rdb_Male.Font = new System.Drawing.Font("SAHAR", 10F);
+            this.rdb_Male.Location = new System.Drawing.Point(3, 10);
+            this.rdb_Male.Name = "rdb_Male";
+            this.rdb_Male.Size = new System.Drawing.Size(54, 31);
+            this.rdb_Male.TabIndex = 0;
+            this.rdb_Male.TabStop = true;
+            this.rdb_Male.Text = "Male";
+            this.rdb_Male.UseVisualStyleBackColor = true;
+            // 
+            // cb_Countries
+            // 
+            this.cb_Countries.Font = new System.Drawing.Font("SAHAR", 8F);
+            this.cb_Countries.FormattingEnabled = true;
+            this.cb_Countries.Location = new System.Drawing.Point(229, 248);
+            this.cb_Countries.Name = "cb_Countries";
+            this.cb_Countries.Size = new System.Drawing.Size(200, 29);
+            this.cb_Countries.TabIndex = 22;
+            // 
             // ctrAdd_EditPerosn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.cb_Countries);
             this.Controls.Add(this.gb_Gendor);
             this.Controls.Add(this.dtp_DateOfBirth);
             this.Controls.Add(this.txb_Address);
@@ -343,6 +354,7 @@
             this.Controls.Add(this.lbl_PersonID);
             this.Name = "ctrAdd_EditPerosn";
             this.Size = new System.Drawing.Size(851, 409);
+            this.Load += new System.EventHandler(this.ctrAdd_EditPerosn_Load);
             this.gb_Gendor.ResumeLayout(false);
             this.gb_Gendor.PerformLayout();
             this.ResumeLayout(false);
@@ -377,5 +389,6 @@
         private System.Windows.Forms.GroupBox gb_Gendor;
         private System.Windows.Forms.RadioButton rdb_Female;
         private System.Windows.Forms.RadioButton rdb_Male;
+        private System.Windows.Forms.ComboBox cb_Countries;
     }
 }

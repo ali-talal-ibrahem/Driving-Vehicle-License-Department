@@ -31,6 +31,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_TitlePage = new System.Windows.Forms.Label();
             this.ctrAdd_EditPerosn = new DVLD_WindowsForm_Presentation.ctrAdd_EditPerosn();
+            this.ctrAdd_EditPerosn1 = new DVLD_WindowsForm_Presentation.ctrAdd_EditPerosn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,13 +64,21 @@
             this.ctrAdd_EditPerosn.Size = new System.Drawing.Size(924, 449);
             this.ctrAdd_EditPerosn.TabIndex = 2;
             // 
+            // ctrAdd_EditPerosn1
+            // 
+            this.ctrAdd_EditPerosn1.BackColor = System.Drawing.Color.White;
+            this.ctrAdd_EditPerosn1.Location = new System.Drawing.Point(12, 79);
+            this.ctrAdd_EditPerosn1.Name = "ctrAdd_EditPerosn1";
+            this.ctrAdd_EditPerosn1.Size = new System.Drawing.Size(851, 409);
+            this.ctrAdd_EditPerosn1.TabIndex = 2;
+            // 
             // frmAdd_EditPreson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(908, 517);
-            this.Controls.Add(this.ctrAdd_EditPerosn);
+            this.Controls.Add(this.ctrAdd_EditPerosn1);
             this.Controls.Add(this.lbl_TitlePage);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -87,5 +96,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_TitlePage;
         private DVLD_WindowsForm_Presentation.ctrAdd_EditPerosn ctrAdd_EditPerosn;
+        private ctrAdd_EditPerosn ctrAdd_EditPerosn1;
     }
 }
