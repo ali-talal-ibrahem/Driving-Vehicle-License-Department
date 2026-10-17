@@ -85,6 +85,7 @@
             this.Name = "frmAdd_EditPreson";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DVLD - ";
+            this.Load += new System.EventHandler(this.frmAdd_EditPreson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
