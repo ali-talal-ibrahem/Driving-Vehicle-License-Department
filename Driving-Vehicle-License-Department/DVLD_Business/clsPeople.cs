@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Diagnostics;
 using DVLD_DataAccess;
 
 namespace DVLD_Business
@@ -95,8 +96,29 @@ namespace DVLD_Business
 
             return clsPeopleData.GetAllPeopleByFilterFromDataBase(TrueColumnName, FilterValue);
         }
-   
-        
+
+        public static clsPeople Find(int PersonID)
+        {
+            string FirstName = "";
+            string SecondName = "";
+            string ThirdName = "";
+            string LastName = "";
+            string NationalNO = "";
+            string PhoneNumber = "";
+            string Email = "";
+            string Address = "";
+            int NationalityCountryID = -1;
+            byte Gender = 1;
+            DateTime DateOfBirth = DateTime.Now;
+            string ImagePath = "";
+
+            if(clsPeopleData.GetPerosnInfoById(PersonID, ref FirstName, ref SecondName, ref ThirdName, ref LastName, ref NationalNO, ref PhoneNumber, ref Email, ref Address, ref NationalityCountryID, ref Gender, ref DateOfBirth, ref ImagePath))
+            {
+                return new clsPeople(PersonID, FirstName, SecondName, ThirdName, LastName, NationalNO, PhoneNumber, Email, Address, NationalityCountryID, Gender, DateOfBirth, ImagePath);
+            }
+
+            return null;
+        }
 
 
     }
