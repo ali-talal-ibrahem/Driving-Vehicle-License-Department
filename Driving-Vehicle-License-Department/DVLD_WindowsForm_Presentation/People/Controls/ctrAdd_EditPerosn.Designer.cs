@@ -195,7 +195,7 @@
             this.txb_FirstName.Location = new System.Drawing.Point(8, 65);
             this.txb_FirstName.Name = "txb_FirstName";
             this.txb_FirstName.Size = new System.Drawing.Size(138, 29);
-            this.txb_FirstName.TabIndex = 11;
+            this.txb_FirstName.TabIndex = 0;
             // 
             // txb_SecondName
             // 
@@ -203,7 +203,7 @@
             this.txb_SecondName.Location = new System.Drawing.Point(229, 65);
             this.txb_SecondName.Name = "txb_SecondName";
             this.txb_SecondName.Size = new System.Drawing.Size(138, 29);
-            this.txb_SecondName.TabIndex = 12;
+            this.txb_SecondName.TabIndex = 1;
             // 
             // txb_ThirdName
             // 
@@ -211,7 +211,7 @@
             this.txb_ThirdName.Location = new System.Drawing.Point(479, 65);
             this.txb_ThirdName.Name = "txb_ThirdName";
             this.txb_ThirdName.Size = new System.Drawing.Size(138, 29);
-            this.txb_ThirdName.TabIndex = 13;
+            this.txb_ThirdName.TabIndex = 2;
             // 
             // txb_LastName
             // 
@@ -219,7 +219,7 @@
             this.txb_LastName.Location = new System.Drawing.Point(709, 65);
             this.txb_LastName.Name = "txb_LastName";
             this.txb_LastName.Size = new System.Drawing.Size(138, 29);
-            this.txb_LastName.TabIndex = 14;
+            this.txb_LastName.TabIndex = 3;
             // 
             // txb_NO
             // 
@@ -227,7 +227,7 @@
             this.txb_NO.Location = new System.Drawing.Point(8, 126);
             this.txb_NO.Name = "txb_NO";
             this.txb_NO.Size = new System.Drawing.Size(138, 29);
-            this.txb_NO.TabIndex = 15;
+            this.txb_NO.TabIndex = 4;
             // 
             // txb_PhoneNumber
             // 
@@ -235,7 +235,7 @@
             this.txb_PhoneNumber.Location = new System.Drawing.Point(229, 187);
             this.txb_PhoneNumber.Name = "txb_PhoneNumber";
             this.txb_PhoneNumber.Size = new System.Drawing.Size(138, 29);
-            this.txb_PhoneNumber.TabIndex = 16;
+            this.txb_PhoneNumber.TabIndex = 7;
             // 
             // txb_Email
             // 
@@ -243,7 +243,7 @@
             this.txb_Email.Location = new System.Drawing.Point(8, 248);
             this.txb_Email.Name = "txb_Email";
             this.txb_Email.Size = new System.Drawing.Size(138, 29);
-            this.txb_Email.TabIndex = 17;
+            this.txb_Email.TabIndex = 8;
             // 
             // txb_Address
             // 
@@ -252,7 +252,7 @@
             this.txb_Address.Multiline = true;
             this.txb_Address.Name = "txb_Address";
             this.txb_Address.Size = new System.Drawing.Size(609, 94);
-            this.txb_Address.TabIndex = 18;
+            this.txb_Address.TabIndex = 11;
             // 
             // dtp_DateOfBirth
             // 
@@ -261,7 +261,7 @@
             this.dtp_DateOfBirth.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
             this.dtp_DateOfBirth.Name = "dtp_DateOfBirth";
             this.dtp_DateOfBirth.Size = new System.Drawing.Size(200, 20);
-            this.dtp_DateOfBirth.TabIndex = 19;
+            this.dtp_DateOfBirth.TabIndex = 5;
             this.dtp_DateOfBirth.Value = new System.DateTime(2006, 12, 31, 0, 0, 0, 0);
             // 
             // lbl_PersonID
@@ -285,7 +285,7 @@
             this.gb_Gendor.Location = new System.Drawing.Point(8, 177);
             this.gb_Gendor.Name = "gb_Gendor";
             this.gb_Gendor.Size = new System.Drawing.Size(152, 48);
-            this.gb_Gendor.TabIndex = 21;
+            this.gb_Gendor.TabIndex = 6;
             this.gb_Gendor.TabStop = false;
             // 
             // rdb_Female
@@ -318,10 +318,11 @@
             // 
             this.cb_Countries.Font = new System.Drawing.Font("SAHAR", 8F);
             this.cb_Countries.FormattingEnabled = true;
+            this.cb_Countries.ItemHeight = 21;
             this.cb_Countries.Location = new System.Drawing.Point(229, 248);
             this.cb_Countries.Name = "cb_Countries";
             this.cb_Countries.Size = new System.Drawing.Size(200, 29);
-            this.cb_Countries.TabIndex = 22;
+            this.cb_Countries.TabIndex = 10;
             // 
             // ctrAdd_EditPerosn
             // 
@@ -354,7 +355,6 @@
             this.Controls.Add(this.lbl_PersonID);
             this.Name = "ctrAdd_EditPerosn";
             this.Size = new System.Drawing.Size(851, 409);
-            this.Load += new System.EventHandler(this.ctrAdd_EditPerosn_Load);
             this.gb_Gendor.ResumeLayout(false);
             this.gb_Gendor.PerformLayout();
             this.ResumeLayout(false);
