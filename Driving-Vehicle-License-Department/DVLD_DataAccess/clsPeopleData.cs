@@ -97,7 +97,70 @@ namespace DVLD_DataAccess
             return dt;
         }
 
+        public static bool GetPerosnInfoById(int PersonID, ref string FirstName, ref string SecondName, ref string ThirdName, ref string LastName, ref string NationalNO, ref string PhoneNumber, ref string Email, ref string Address, ref int NationalityCountryID, ref byte Gender, ref DateTime DateOfBirth, ref string ImagePath)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessString.ConnectionString);
+
+            string query = "SELECT * FROM People WHERE PersonID = @PersonID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    isFound = true;
+                    FirstName = reader["FirstName"].ToString();
+                    SecondName = reader["SecondName"].ToString();
+                    ThirdName = reader["ThirdName"].ToString();
+                    LastName = reader["LastName"].ToString();
+                    NationalNO = reader["NationalNo"].ToString();
+                    PhoneNumber = reader["Phone"].ToString();
+                    Email = reader["Email"].ToString();
+                    Address = reader["Address"].ToString();
+                    NationalityCountryID = (int)reader["NationalityCountryID"];
+                    Gender = (byte)reader["Gendor"];
+                    DateOfBirth = (DateTime)reader["DateOfBirth"];
+                    ImagePath = reader["ImagePath"].ToString();
+
+                    if (reader["ImagePath"] != DBNull.Value)
+                    {
+                        ImagePath = (string)reader["ImagePath"];
+                    }
+                    else
+                    {
+                        ImagePath = "";
+                    }
+
+                }
+                else {
+                    isFound = false;
+                }
+
+                reader.Close();
+
+            }
+            catch (Exception ex)
+            {
 
 
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+   
+    
+    
     }
 }
