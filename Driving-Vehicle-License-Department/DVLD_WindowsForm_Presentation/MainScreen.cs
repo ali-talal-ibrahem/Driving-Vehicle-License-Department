@@ -18,6 +18,8 @@ namespace DVLD_WindowsForm_Presentation
             InitializeComponent();
         }
 
+        // Applications Menu Strip
+
         private void Applications_DrivingLicensesServices_NewDrivingLicense_LocalLicense_TSM_Click(object sender, EventArgs e)
         {
             MessageBox.Show("New Local Driving License Soon ...", "Information" , MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -83,22 +85,27 @@ namespace DVLD_WindowsForm_Presentation
             MessageBox.Show("Manage Application Type Soon ...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+
+        // People Menu Strip
         private void People_TSM_Click(object sender, EventArgs e)
         {
             frmManagePeopleForm GoForm = new frmManagePeopleForm();
             GoForm.ShowDialog();
         }
 
+        // Drivers Menu Strip
         private void Drivers_TSM_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Drivers Soon ...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        // Users Menu Strip
         private void Users_TSM_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Users Soon ...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        // Account Settings Menu Strip
         private void AccountSettings_CurrentUserInfo_TSM_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Current User Info Soon ...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);

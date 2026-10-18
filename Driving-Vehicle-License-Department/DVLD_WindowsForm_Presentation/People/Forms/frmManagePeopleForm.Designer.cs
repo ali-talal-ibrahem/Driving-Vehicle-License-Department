@@ -32,11 +32,9 @@
             this.dgv_PeopleInformation = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cms_ShowDetails = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.cms_AddNewPerson = new System.Windows.Forms.ToolStripMenuItem();
             this.cms_EditPerson = new System.Windows.Forms.ToolStripMenuItem();
             this.cms_DeletePerson = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.cms_SendEmail = new System.Windows.Forms.ToolStripMenuItem();
             this.cms_CallPhone = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_ResulrPeopleCount = new System.Windows.Forms.Label();
@@ -72,71 +70,77 @@
             // 
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cms_ShowDetails,
-            this.toolStripSeparator1,
             this.cms_AddNewPerson,
             this.cms_EditPerson,
             this.cms_DeletePerson,
-            this.toolStripSeparator2,
             this.cms_SendEmail,
             this.cms_CallPhone});
             this.contextMenuStrip.Name = "contextMenuStrip1";
-            this.contextMenuStrip.Size = new System.Drawing.Size(169, 208);
+            this.contextMenuStrip.Size = new System.Drawing.Size(169, 196);
             // 
             // cms_ShowDetails
             // 
+            this.cms_ShowDetails.BackColor = System.Drawing.Color.DarkSlateGray;
             this.cms_ShowDetails.Font = new System.Drawing.Font("SAHAR", 10F);
+            this.cms_ShowDetails.ForeColor = System.Drawing.Color.White;
+            this.cms_ShowDetails.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_supplier_100;
             this.cms_ShowDetails.Name = "cms_ShowDetails";
-            this.cms_ShowDetails.Size = new System.Drawing.Size(168, 32);
+            this.cms_ShowDetails.Size = new System.Drawing.Size(180, 32);
             this.cms_ShowDetails.Text = "Show Details";
             this.cms_ShowDetails.Click += new System.EventHandler(this.cms_ShowDetails_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
-            // 
             // cms_AddNewPerson
             // 
+            this.cms_AddNewPerson.BackColor = System.Drawing.Color.DarkSlateGray;
             this.cms_AddNewPerson.Font = new System.Drawing.Font("SAHAR", 10F);
+            this.cms_AddNewPerson.ForeColor = System.Drawing.Color.White;
+            this.cms_AddNewPerson.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_add_user_male_100;
             this.cms_AddNewPerson.Name = "cms_AddNewPerson";
-            this.cms_AddNewPerson.Size = new System.Drawing.Size(168, 32);
+            this.cms_AddNewPerson.Size = new System.Drawing.Size(180, 32);
             this.cms_AddNewPerson.Text = "Add New Person";
             this.cms_AddNewPerson.Click += new System.EventHandler(this.cms_AddNewPerson_Click);
             // 
             // cms_EditPerson
             // 
+            this.cms_EditPerson.BackColor = System.Drawing.Color.DarkSlateGray;
             this.cms_EditPerson.Font = new System.Drawing.Font("SAHAR", 10F);
+            this.cms_EditPerson.ForeColor = System.Drawing.Color.White;
+            this.cms_EditPerson.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_registration_100;
             this.cms_EditPerson.Name = "cms_EditPerson";
-            this.cms_EditPerson.Size = new System.Drawing.Size(168, 32);
+            this.cms_EditPerson.Size = new System.Drawing.Size(180, 32);
             this.cms_EditPerson.Text = "Edit Person";
             this.cms_EditPerson.Click += new System.EventHandler(this.cms_EditPerson_Click);
             // 
             // cms_DeletePerson
             // 
+            this.cms_DeletePerson.BackColor = System.Drawing.Color.DarkSlateGray;
             this.cms_DeletePerson.Font = new System.Drawing.Font("SAHAR", 10F);
+            this.cms_DeletePerson.ForeColor = System.Drawing.Color.White;
+            this.cms_DeletePerson.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_cancel_100;
             this.cms_DeletePerson.Name = "cms_DeletePerson";
-            this.cms_DeletePerson.Size = new System.Drawing.Size(168, 32);
+            this.cms_DeletePerson.Size = new System.Drawing.Size(180, 32);
             this.cms_DeletePerson.Text = "Delete Person";
             this.cms_DeletePerson.Click += new System.EventHandler(this.cms_DeletePerson_Click);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(165, 6);
-            // 
             // cms_SendEmail
             // 
+            this.cms_SendEmail.BackColor = System.Drawing.Color.DarkSlateGray;
             this.cms_SendEmail.Font = new System.Drawing.Font("SAHAR", 10F);
+            this.cms_SendEmail.ForeColor = System.Drawing.Color.White;
+            this.cms_SendEmail.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_email_100;
             this.cms_SendEmail.Name = "cms_SendEmail";
-            this.cms_SendEmail.Size = new System.Drawing.Size(168, 32);
+            this.cms_SendEmail.Size = new System.Drawing.Size(180, 32);
             this.cms_SendEmail.Text = "Send Email";
             this.cms_SendEmail.Click += new System.EventHandler(this.cms_SendEmail_Click);
             // 
             // cms_CallPhone
             // 
+            this.cms_CallPhone.BackColor = System.Drawing.Color.DarkSlateGray;
             this.cms_CallPhone.Font = new System.Drawing.Font("SAHAR", 10F);
+            this.cms_CallPhone.ForeColor = System.Drawing.Color.White;
+            this.cms_CallPhone.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_phone_100;
             this.cms_CallPhone.Name = "cms_CallPhone";
-            this.cms_CallPhone.Size = new System.Drawing.Size(168, 32);
+            this.cms_CallPhone.Size = new System.Drawing.Size(180, 32);
             this.cms_CallPhone.Text = "Call Phone";
             this.cms_CallPhone.Click += new System.EventHandler(this.cms_CallPhone_Click);
             // 
@@ -153,23 +157,32 @@
             // 
             // btn_AddNewPerson
             // 
+            this.btn_AddNewPerson.BackColor = System.Drawing.Color.Transparent;
+            this.btn_AddNewPerson.BackgroundImage = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_add_user_male_100;
+            this.btn_AddNewPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_AddNewPerson.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_AddNewPerson.Location = new System.Drawing.Point(866, 74);
+            this.btn_AddNewPerson.FlatAppearance.BorderSize = 0;
+            this.btn_AddNewPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddNewPerson.Location = new System.Drawing.Point(863, 73);
             this.btn_AddNewPerson.Name = "btn_AddNewPerson";
-            this.btn_AddNewPerson.Size = new System.Drawing.Size(36, 27);
+            this.btn_AddNewPerson.Size = new System.Drawing.Size(33, 27);
             this.btn_AddNewPerson.TabIndex = 2;
-            this.btn_AddNewPerson.UseVisualStyleBackColor = true;
+            this.btn_AddNewPerson.UseVisualStyleBackColor = false;
             this.btn_AddNewPerson.Click += new System.EventHandler(this.btn_AddNewPerson_Click);
             // 
             // btn_CloseForm
             // 
+            this.btn_CloseForm.BackColor = System.Drawing.Color.Crimson;
+            this.btn_CloseForm.BackgroundImage = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_cancel_100;
+            this.btn_CloseForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_CloseForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_CloseForm.Location = new System.Drawing.Point(842, 448);
+            this.btn_CloseForm.FlatAppearance.BorderSize = 0;
+            this.btn_CloseForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CloseForm.Location = new System.Drawing.Point(863, 448);
             this.btn_CloseForm.Name = "btn_CloseForm";
-            this.btn_CloseForm.Size = new System.Drawing.Size(60, 27);
+            this.btn_CloseForm.Size = new System.Drawing.Size(33, 27);
             this.btn_CloseForm.TabIndex = 3;
-            this.btn_CloseForm.Text = "Close";
-            this.btn_CloseForm.UseVisualStyleBackColor = true;
+            this.btn_CloseForm.UseVisualStyleBackColor = false;
             this.btn_CloseForm.Click += new System.EventHandler(this.btn_CloseForm_Click);
             // 
             // label1
@@ -260,11 +273,9 @@
         private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem cms_ShowDetails;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem cms_AddNewPerson;
         private System.Windows.Forms.ToolStripMenuItem cms_EditPerson;
         private System.Windows.Forms.ToolStripMenuItem cms_DeletePerson;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem cms_SendEmail;
         private System.Windows.Forms.ToolStripMenuItem cms_CallPhone;
         private System.Windows.Forms.ErrorProvider errorProvider1;
