@@ -28,7 +28,7 @@ namespace DVLD_WindowsForm_Presentation.People
 
         private void btn_AddNewPerson_Click(object sender, EventArgs e)
         {
-            frmAdd_EditPreson GoAddForm = new frmAdd_EditPreson(-1);
+            frmAdd_EditPreson GoAddForm = new frmAdd_EditPreson();
             GoAddForm.ShowDialog();
             _RefreshPeopleList();
         }
@@ -47,7 +47,7 @@ namespace DVLD_WindowsForm_Presentation.People
 
         private void cms_AddNewPerson_Click(object sender, EventArgs e)
         {
-            frmAdd_EditPreson GoAddForm = new frmAdd_EditPreson(-1);
+            frmAdd_EditPreson GoAddForm = new frmAdd_EditPreson();
             GoAddForm.ShowDialog();
             _RefreshPeopleList();
         }
@@ -92,7 +92,7 @@ namespace DVLD_WindowsForm_Presentation.People
 
             string FilterColumnName = cb_Filter.SelectedItem.ToString();
 
-            dgv_PeopleInformation.DataSource = clsPerson.GetAllPeopleByFilter(FilterColumnName, txb_Filter.Text.Trim());
+            //dgv_PeopleInformation.DataSource = clsPerson.GetAllPeopleByFilter(FilterColumnName, txb_Filter.Text.Trim());
         }
 
         private void txb_Filter_KeyPress(object sender, KeyPressEventArgs e)

@@ -85,7 +85,7 @@
             this.cms_ShowDetails.ForeColor = System.Drawing.Color.White;
             this.cms_ShowDetails.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_supplier_100;
             this.cms_ShowDetails.Name = "cms_ShowDetails";
-            this.cms_ShowDetails.Size = new System.Drawing.Size(180, 32);
+            this.cms_ShowDetails.Size = new System.Drawing.Size(168, 32);
             this.cms_ShowDetails.Text = "Show Details";
             this.cms_ShowDetails.Click += new System.EventHandler(this.cms_ShowDetails_Click);
             // 
@@ -96,7 +96,7 @@
             this.cms_AddNewPerson.ForeColor = System.Drawing.Color.White;
             this.cms_AddNewPerson.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_add_user_male_100;
             this.cms_AddNewPerson.Name = "cms_AddNewPerson";
-            this.cms_AddNewPerson.Size = new System.Drawing.Size(180, 32);
+            this.cms_AddNewPerson.Size = new System.Drawing.Size(168, 32);
             this.cms_AddNewPerson.Text = "Add New Person";
             this.cms_AddNewPerson.Click += new System.EventHandler(this.cms_AddNewPerson_Click);
             // 
@@ -107,7 +107,7 @@
             this.cms_EditPerson.ForeColor = System.Drawing.Color.White;
             this.cms_EditPerson.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_registration_100;
             this.cms_EditPerson.Name = "cms_EditPerson";
-            this.cms_EditPerson.Size = new System.Drawing.Size(180, 32);
+            this.cms_EditPerson.Size = new System.Drawing.Size(168, 32);
             this.cms_EditPerson.Text = "Edit Person";
             this.cms_EditPerson.Click += new System.EventHandler(this.cms_EditPerson_Click);
             // 
@@ -118,7 +118,7 @@
             this.cms_DeletePerson.ForeColor = System.Drawing.Color.White;
             this.cms_DeletePerson.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_cancel_100;
             this.cms_DeletePerson.Name = "cms_DeletePerson";
-            this.cms_DeletePerson.Size = new System.Drawing.Size(180, 32);
+            this.cms_DeletePerson.Size = new System.Drawing.Size(168, 32);
             this.cms_DeletePerson.Text = "Delete Person";
             this.cms_DeletePerson.Click += new System.EventHandler(this.cms_DeletePerson_Click);
             // 
@@ -129,7 +129,7 @@
             this.cms_SendEmail.ForeColor = System.Drawing.Color.White;
             this.cms_SendEmail.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_email_100;
             this.cms_SendEmail.Name = "cms_SendEmail";
-            this.cms_SendEmail.Size = new System.Drawing.Size(180, 32);
+            this.cms_SendEmail.Size = new System.Drawing.Size(168, 32);
             this.cms_SendEmail.Text = "Send Email";
             this.cms_SendEmail.Click += new System.EventHandler(this.cms_SendEmail_Click);
             // 
@@ -140,7 +140,7 @@
             this.cms_CallPhone.ForeColor = System.Drawing.Color.White;
             this.cms_CallPhone.Image = global::DVLD_WindowsForm_Presentation.Properties.Resources.icons8_phone_100;
             this.cms_CallPhone.Name = "cms_CallPhone";
-            this.cms_CallPhone.Size = new System.Drawing.Size(180, 32);
+            this.cms_CallPhone.Size = new System.Drawing.Size(168, 32);
             this.cms_CallPhone.Text = "Call Phone";
             this.cms_CallPhone.Click += new System.EventHandler(this.cms_CallPhone_Click);
             // 
