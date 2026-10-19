@@ -7,8 +7,8 @@ namespace DVLD_Business
     public class clsCountry
     {
 
-        string _CountryName { get; set; }
-        int _CountryID { get; set; }
+        public string _CountryName { get; set; }
+        public int _CountryID { get; set; }
 
         clsCountry() {
             _CountryID = -1;

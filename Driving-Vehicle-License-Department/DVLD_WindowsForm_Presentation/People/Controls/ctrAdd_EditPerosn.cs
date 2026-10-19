@@ -79,7 +79,7 @@ namespace DVLD_WindowsForm_Presentation
             txb_Email.Text = _Person._Email;
             cb_Countries.SelectedValue = _Person._NationalityCountryID;
             dtp_DateOfBirth.Value = _Person._DateOfBirth;
-            if (_Person._Gender == 0)
+            if (_Person._Gendor == 0)
             {
                 rdb_Male.Checked = true;
             }
