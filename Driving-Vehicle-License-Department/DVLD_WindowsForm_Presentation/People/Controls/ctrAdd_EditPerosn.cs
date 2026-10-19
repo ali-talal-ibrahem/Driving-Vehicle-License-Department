@@ -20,7 +20,7 @@ namespace DVLD_WindowsForm_Presentation
 
         private void _FillAllCountriesInComboBox()
         {
-            DataTable dtCountries = clsCountries.GetAllCountries();
+            DataTable dtCountries = clsCountry.GetAllCountries();
 
             cb_Countries.DataSource = dtCountries;
             cb_Countries.DisplayMember = "CountryName";
