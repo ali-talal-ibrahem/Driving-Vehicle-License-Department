@@ -63,6 +63,16 @@ namespace DVLD_WindowsForm_Presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Femail {
+            get {
+                object obj = ResourceManager.GetObject("Femail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_male_user_group_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-male-user-group-100", resourceCulture);
@@ -576,6 +586,16 @@ namespace DVLD_WindowsForm_Presentation.Properties {
         internal static System.Drawing.Bitmap icons8_user_groups_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-groups-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Male {
+            get {
+                object obj = ResourceManager.GetObject("Male", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
