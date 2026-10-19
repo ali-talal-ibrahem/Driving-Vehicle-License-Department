@@ -131,6 +131,7 @@ namespace DVLD_Business
 
                 case enMode.Update:
                     return _UpdatePerson();
+                    return true;
             }
 
             return false;
