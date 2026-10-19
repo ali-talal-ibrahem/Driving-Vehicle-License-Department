@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics.SymbolStore;
-using System.Net;
-using System.Runtime.InteropServices;
-using Microsoft.SqlServer.Server;
 
 namespace DVLD_DataAccess
 {
@@ -416,7 +412,7 @@ namespace DVLD_DataAccess
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "SELECT Found = 1 WHERE PersonID = @PersonID";
+            string query = "SELECT Found = 1 From People WHERE PersonID = @PersonID";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@PersonID", PersonID);
@@ -452,7 +448,7 @@ namespace DVLD_DataAccess
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "SELECT Found = 1 WHERE NationalNO = @NationalNO";
+            string query = "SELECT Found = 1 WHERE From People LOWER(NationalNo) = LOWER(@NationalNO)";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@NationalNO", NationalNO);

@@ -309,7 +309,6 @@ namespace DVLD_WindowsForm_Presentation
             {
                 errorProvider1.SetError(txb_Email, null);
             }
-            ;
 
         }
 
@@ -327,16 +326,32 @@ namespace DVLD_WindowsForm_Presentation
                 errorProvider1.SetError(txb_NO, null);
             }
 
-            //Make sure the national number is not used by another person
-            if (txb_NO.Text.Trim() != _Person._NationalNO && clsPerson.IsPersonExists(txb_NO.Text.Trim()))
-            {
-                e.Cancel = true;
-                errorProvider1.SetError(txb_NO, "National Number is used for another person!");
 
+            if (_Mode == enMode.AddNewPerson)
+            {
+
+                if (clsPerson.IsPersonExists(txb_NO.Text.Trim()))
+                {
+                    e.Cancel = true;
+                    errorProvider1.SetError(txb_NO, "National Number is used for another person!");
+                }
+                else
+                {
+                    errorProvider1.SetError(txb_NO, null);
+                }
             }
             else
             {
-                errorProvider1.SetError(txb_NO, null);
+
+                if (txb_NO.Text.Trim().ToLower() != _Person._NationalNO.ToLower() && clsPerson.IsPersonExists(txb_NO.Text.Trim()))
+                {
+                    e.Cancel = true;
+                    errorProvider1.SetError(txb_NO, "National Number is used for another person!");
+                }
+                else
+                {
+                    errorProvider1.SetError(txb_NO, null);
+                }
             }
         }
     }

@@ -107,6 +107,7 @@
             this.txb_Address.Name = "txb_Address";
             this.txb_Address.Size = new System.Drawing.Size(609, 94);
             this.txb_Address.TabIndex = 44;
+            this.txb_Address.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txb_Email
             // 
@@ -115,6 +116,7 @@
             this.txb_Email.Name = "txb_Email";
             this.txb_Email.Size = new System.Drawing.Size(138, 29);
             this.txb_Email.TabIndex = 38;
+            this.txb_Email.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txb_SecondName
             // 
@@ -123,6 +125,7 @@
             this.txb_SecondName.Name = "txb_SecondName";
             this.txb_SecondName.Size = new System.Drawing.Size(138, 29);
             this.txb_SecondName.TabIndex = 25;
+            this.txb_SecondName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txb_FirstName
             // 
@@ -131,6 +134,7 @@
             this.txb_FirstName.Name = "txb_FirstName";
             this.txb_FirstName.Size = new System.Drawing.Size(138, 29);
             this.txb_FirstName.TabIndex = 22;
+            this.txb_FirstName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // label11
             // 
@@ -164,6 +168,7 @@
             this.txb_ThirdName.Name = "txb_ThirdName";
             this.txb_ThirdName.Size = new System.Drawing.Size(138, 29);
             this.txb_ThirdName.TabIndex = 28;
+            this.txb_ThirdName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // rdb_Female
             // 
@@ -196,6 +201,7 @@
             this.txb_PhoneNumber.Name = "txb_PhoneNumber";
             this.txb_PhoneNumber.Size = new System.Drawing.Size(138, 29);
             this.txb_PhoneNumber.TabIndex = 37;
+            this.txb_PhoneNumber.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txb_NO
             // 
@@ -204,6 +210,7 @@
             this.txb_NO.Name = "txb_NO";
             this.txb_NO.Size = new System.Drawing.Size(138, 29);
             this.txb_NO.TabIndex = 32;
+            this.txb_NO.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalNo_Validating);
             // 
             // txb_LastName
             // 
@@ -212,6 +219,7 @@
             this.txb_LastName.Name = "txb_LastName";
             this.txb_LastName.Size = new System.Drawing.Size(138, 29);
             this.txb_LastName.TabIndex = 29;
+            this.txb_LastName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // label12
             // 
