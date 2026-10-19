@@ -14,7 +14,7 @@ namespace DVLD_DataAccess
 
             DataTable dt = new DataTable();
 
-            SqlConnection conn = new SqlConnection(clsDataAccessString.ConnectionString);
+            SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString);
             string query = "SELECT * FROM Countries";
             SqlCommand command = new SqlCommand(query, conn);
 
