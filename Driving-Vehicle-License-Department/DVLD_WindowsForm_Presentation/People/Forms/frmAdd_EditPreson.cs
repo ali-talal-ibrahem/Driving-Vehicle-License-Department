@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_Business;
+using DVLD_WindowsForm_Presentation.Global_Classes;
 
 namespace DVLD_WindowsForm_Presentation
 {
@@ -315,27 +316,27 @@ namespace DVLD_WindowsForm_Presentation
         private void txtNationalNo_Validating(object sender, CancelEventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txtNationalNo.Text.Trim()))
+            if (string.IsNullOrEmpty(txb_NO.Text.Trim()))
             {
                 e.Cancel = true;
-                errorProvider1.SetError(txtNationalNo, "This field is required!");
+                errorProvider1.SetError(txb_NO, "This field is required!");
                 return;
             }
             else
             {
-                errorProvider1.SetError(txtNationalNo, null);
+                errorProvider1.SetError(txb_NO, null);
             }
 
             //Make sure the national number is not used by another person
-            if (txtNationalNo.Text.Trim() != _Person.NationalNo && clsPerson.isPersonExist(txtNationalNo.Text.Trim()))
+            if (txb_NO.Text.Trim() != _Person._NationalNO && clsPerson.IsPersonExists(txb_NO.Text.Trim()))
             {
                 e.Cancel = true;
-                errorProvider1.SetError(txtNationalNo, "National Number is used for another person!");
+                errorProvider1.SetError(txb_NO, "National Number is used for another person!");
 
             }
             else
             {
-                errorProvider1.SetError(txtNationalNo, null);
+                errorProvider1.SetError(txb_NO, null);
             }
         }
     }
