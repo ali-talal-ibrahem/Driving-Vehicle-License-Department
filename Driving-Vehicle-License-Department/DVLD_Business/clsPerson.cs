@@ -45,7 +45,7 @@ namespace DVLD_Business
             _Address = "";
             _DateOfBirth = DateTime.Now;
             _NationalityCountryID = -1;
-            _Gendor = 1;
+            _Gendor = 0;
             _ImagePath = "";
         }
         private clsPerson(int PersonID, string FirstName, string SecondName, string ThirdName, string LastName, string NationalNO, string PhoneNumber, string Email, string Address, int NationalityCountryID, short Gendor, DateTime DateOfBirth, string ImagePath)
