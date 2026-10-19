@@ -15,7 +15,7 @@ namespace DVLD_WindowsForm_Presentation.People
 
         private void _RefreshPeopleList()
         {
-            dgv_PeopleInformation.DataSource = clsPeople.GetAllPeople();
+            dgv_PeopleInformation.DataSource = clsPerson.GetAllPeople();
             int CountAllPeople = dgv_PeopleInformation.RowCount;
             lbl_ResulrPeopleCount.Text = "Result : " + CountAllPeople.ToString();
             cb_Filter.SelectedIndex = 0;
@@ -92,7 +92,7 @@ namespace DVLD_WindowsForm_Presentation.People
 
             string FilterColumnName = cb_Filter.SelectedItem.ToString();
 
-            dgv_PeopleInformation.DataSource = clsPeople.GetAllPeopleByFilter(FilterColumnName, txb_Filter.Text.Trim());
+            dgv_PeopleInformation.DataSource = clsPerson.GetAllPeopleByFilter(FilterColumnName, txb_Filter.Text.Trim());
         }
 
         private void txb_Filter_KeyPress(object sender, KeyPressEventArgs e)

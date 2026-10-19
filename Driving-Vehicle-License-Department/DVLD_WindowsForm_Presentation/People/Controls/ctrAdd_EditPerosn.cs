@@ -11,7 +11,7 @@ namespace DVLD_WindowsForm_Presentation
         private enum enMode {AddNewPerson = 0 , UpdatePerson = 1 }
         private enMode _Mode = enMode.AddNewPerson;
         private int _PersonID;
-        private clsPeople _Person;
+        private clsPerson _Person;
 
         public ctrAdd_EditPerosn()
         {
@@ -55,13 +55,13 @@ namespace DVLD_WindowsForm_Presentation
 
             if (_Mode == enMode.AddNewPerson) 
             { 
-                _Person = new clsPeople();
+                _Person = new clsPerson();
                 return;
 
             }
 
 
-            _Person = clsPeople.Find(_PersonID);
+            _Person = clsPerson.Find(_PersonID);
 
             if(_Person == null)
             {
