@@ -5,7 +5,7 @@ using DVLD_DataAccess;
 
 namespace DVLD_Business
 {
-    public class clsPeople
+    public class clsPerson
     {
 
         private enum enMode { AddNew = 0 , Update = 1 }
@@ -26,7 +26,7 @@ namespace DVLD_Business
         public DateTime _DateOfBirth { get; set; }
 
 
-        public clsPeople() 
+        public clsPerson() 
         { 
             _Mode = enMode.AddNew;
             _FirstName = "";
@@ -43,7 +43,7 @@ namespace DVLD_Business
             _ImagePath = "";
         }
 
-        private clsPeople(int PersonID , string FirstName, string SecondName, string ThirdName, string LastName, string NationalNO, string PhoneNumber, string Email, string Address, int NationalityCountryID, byte Gender, DateTime DateOfBirth, string ImagePath)
+        private clsPerson(int PersonID , string FirstName, string SecondName, string ThirdName, string LastName, string NationalNO, string PhoneNumber, string Email, string Address, int NationalityCountryID, byte Gender, DateTime DateOfBirth, string ImagePath)
         {
             _Mode = enMode.Update;
             _PersonID = PersonID;
@@ -63,7 +63,7 @@ namespace DVLD_Business
 
         public static DataTable GetAllPeople()
         {
-            return clsPeopleData.GetAllPeopleFromDataBase();
+            return clsPersonData.GetAllPeopleFromDataBase();
         }
 
         public static DataTable GetAllPeopleByFilter(string FilterColumn, string FilterValue)
@@ -94,10 +94,10 @@ namespace DVLD_Business
                     break;
             }
 
-            return clsPeopleData.GetAllPeopleByFilterFromDataBase(TrueColumnName, FilterValue);
+            return clsPersonData.GetAllPeopleByFilterFromDataBase(TrueColumnName, FilterValue);
         }
 
-        public static clsPeople Find(int PersonID)
+        public static clsPerson Find(int PersonID)
         {
             string FirstName = "";
             string SecondName = "";
@@ -112,9 +112,9 @@ namespace DVLD_Business
             DateTime DateOfBirth = DateTime.Now;
             string ImagePath = "";
 
-            if(clsPeopleData.GetPerosnInfoById(PersonID, ref FirstName, ref SecondName, ref ThirdName, ref LastName, ref NationalNO, ref PhoneNumber, ref Email, ref Address, ref NationalityCountryID, ref Gender, ref DateOfBirth, ref ImagePath))
+            if(clsPersonData.GetPerosnInfoById(PersonID, ref FirstName, ref SecondName, ref ThirdName, ref LastName, ref NationalNO, ref PhoneNumber, ref Email, ref Address, ref NationalityCountryID, ref Gender, ref DateOfBirth, ref ImagePath))
             {
-                return new clsPeople(PersonID, FirstName, SecondName, ThirdName, LastName, NationalNO, PhoneNumber, Email, Address, NationalityCountryID, Gender, DateOfBirth, ImagePath);
+                return new clsPerson(PersonID, FirstName, SecondName, ThirdName, LastName, NationalNO, PhoneNumber, Email, Address, NationalityCountryID, Gender, DateOfBirth, ImagePath);
             }
 
             return null;
