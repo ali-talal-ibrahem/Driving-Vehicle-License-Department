@@ -12,7 +12,7 @@ namespace DVLD_DataAccess
     {
 
         public static bool GetPerosnInfoByID(int PersonID, ref string FirstName, ref string SecondName, ref string ThirdName,
-            ref string LastName, ref string NationalNO, ref string PhoneNumber, ref string Email, ref string Address,
+            ref string LastName, ref string NationalNO, ref string Phone, ref string Email, ref string Address,
             ref int NationalityCountryID, ref short Gendor, ref DateTime DateOfBirth, ref string ImagePath) 
         { 
 
@@ -48,7 +48,7 @@ namespace DVLD_DataAccess
 
                     LastName = reader["LastName"].ToString();
                     NationalNO = reader["NationalNO"].ToString();
-                    PhoneNumber = reader["PhoneNumber"].ToString();
+                    Phone = reader["Phone"].ToString();
 
                     if (reader["Email"] != DBNull.Value)
                     {
@@ -93,7 +93,7 @@ namespace DVLD_DataAccess
         }
 
         public static bool GetPerosnInfoByNationalNO(string NationalNO, ref int PersonID, ref string FirstName, ref string SecondName, ref string ThirdName,
-           ref string LastName, ref string PhoneNumber, ref string Email, ref string Address,
+           ref string LastName, ref string Phone, ref string Email, ref string Address,
            ref int NationalityCountryID, ref short Gendor, ref DateTime DateOfBirth, ref string ImagePath)
         {
 
@@ -130,7 +130,7 @@ namespace DVLD_DataAccess
                     }
 
                     LastName = reader["LastName"].ToString();
-                    PhoneNumber = reader["PhoneNumber"].ToString();
+                    Phone = reader["Phone"].ToString();
 
                     if (reader["Email"] != DBNull.Value)
                     {
@@ -177,16 +177,16 @@ namespace DVLD_DataAccess
         }
 
         public static int AddNewPerson(string FirstName , string SecondName ,  string ThirdName,
-            string LastName,  string PhoneNumber,  string Email,  string Address,
+            string LastName,  string Phone,  string Email,  string Address,
             int NationalityCountryID,  short Gendor,  DateTime DateOfBirth,  string ImagePath) 
         {
             int PersonID = -1;
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = @"INSERT INTO People (FirstName , SecondName , ThirdName , LastName , PhoneNumber , Email
+            string query = @"INSERT INTO People (FirstName , SecondName , ThirdName , LastName , Phone , Email
                              Address , NationalityCountryID , Gendor , DateOfBirth , ImagePath)
-                            VALUES (@FirstName , @SecondName , @ThirdName , @LastName , @PhoneNumber , @Email
+                            VALUES (@FirstName , @SecondName , @ThirdName , @LastName , @Phone , @Email
                              @Address , @NationalityCountryID , @Gendor , @DateOfBirth , @ImagePath) 
                               SELECT SCOPE_IDENTITY();";
 
@@ -204,7 +204,7 @@ namespace DVLD_DataAccess
             }
 
             command.Parameters.AddWithValue("@LastName", LastName);
-            command.Parameters.AddWithValue("@PhoneNumber", PhoneNumber);
+            command.Parameters.AddWithValue("@Phone", Phone);
             command.Parameters.AddWithValue("@Address", Address);
 
             if (Email != "" && Email != null)
@@ -255,25 +255,25 @@ namespace DVLD_DataAccess
         }
 
         public static bool UpdatePerson(int PersonID, string FirstName, string SecondName, string ThirdName,
-            string LastName, string PhoneNumber, string Email, string Address,
+            string LastName, string Phone, string Email, string Address,
             int NationalityCountryID, short Gendor, DateTime DateOfBirth, string ImagePath)
         {
             int rowEffected = 0;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string query = @"UPDATE People
-                            SET FirstName = @FirstName
-                                LastName = @LastName
-                                ThirdName = @ThirdName
-                                SecondName = @SecondName
-                                PhoneNumber = @PhoneNumber
-                                Email = @Email
-                                Address = @Address
-                                NationalityCountryID = @NationalityCountryID
-                                Gendor = @Gendor
-                                DateOfBirth = @DateOfBirth
-                                ImageOfBirth = @ImageOfBirth
-                            Where PeronsID = @PersonID;"
+                            SET FirstName = @FirstName,
+                                LastName = @LastName,
+                                ThirdName = @ThirdName,
+                                SecondName = @SecondName,
+                                Phone = @Phone,
+                                Email = @Email,
+                                Address = @Address,
+                                NationalityCountryID = @NationalityCountryID,
+                                Gendor = @Gendor,
+                                DateOfBirth = @DateOfBirth,
+                                ImagePath = @ImagePath,
+                            Where PersonID = @PersonID;"
                                 ;
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -291,7 +291,7 @@ namespace DVLD_DataAccess
             }
 
             command.Parameters.AddWithValue("@LastName", LastName);
-            command.Parameters.AddWithValue("@PhoneNumber", PhoneNumber);
+            command.Parameters.AddWithValue("@Phone", Phone);
             command.Parameters.AddWithValue("@Address", Address);
 
             if (Email != "" && Email != null)
@@ -379,7 +379,7 @@ namespace DVLD_DataAccess
             string Query = "Select People.PersonID ,People.NationalNo ," +
                            "People.FirstName ,People.SecondName ,People.ThirdName ,People.LastName , " +
                            "CASE WHEN People.Gendor = 0 THEN 'Male' WHEN People.Gendor = 1 THEN 'Female' END AS Gendor ," +
-                           "People.DateOfBirth ,Countries.CountryName ,People.Phone ,People.Email\r\nFrom PeopleINNER JOIN Countries ON Countries.CountryID = People.NationalityCountryID";
+                           "People.DateOfBirth ,Countries.CountryName ,People.Phone ,People.Email From People INNER JOIN Countries ON Countries.CountryID = People.NationalityCountryID";
             SqlCommand Command = new SqlCommand(Query, Connection);
 
             try
