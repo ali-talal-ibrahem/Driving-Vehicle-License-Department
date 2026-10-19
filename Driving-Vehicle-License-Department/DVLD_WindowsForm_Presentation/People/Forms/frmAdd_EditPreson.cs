@@ -295,18 +295,18 @@ namespace DVLD_WindowsForm_Presentation
         private void txtEmail_Validating(object sender, CancelEventArgs e)
         {
             //no need to validate the email incase it's empty.
-            if (txtEmail.Text.Trim() == "")
+            if (txb_Email.Text.Trim() == "")
                 return;
 
             //validate email format
-            if (!clsValidatoin.ValidateEmail(txtEmail.Text))
+            if (!clsValidatoin.ValidateEmail(txb_Email.Text))
             {
                 e.Cancel = true;
-                errorProvider1.SetError(txtEmail, "Invalid Email Address Format!");
+                errorProvider1.SetError(txb_Email, "Invalid Email Address Format!");
             }
             else
             {
-                errorProvider1.SetError(txtEmail, null);
+                errorProvider1.SetError(txb_Email, null);
             }
             ;
 
