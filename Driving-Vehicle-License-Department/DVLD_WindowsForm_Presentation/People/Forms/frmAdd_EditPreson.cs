@@ -216,6 +216,7 @@ namespace DVLD_WindowsForm_Presentation
                 _Mode = enMode.UpdatePerson;
                 this.Text = "DVLD - Update Person : " + _PersonID;
                 lbl_TitleForm.Text = "Update Person (" + _PersonID + ")";
+                lbl_PersonID.Text = _Person.ToString();
 
                 MessageBox.Show("Data Save Successfuly !", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
