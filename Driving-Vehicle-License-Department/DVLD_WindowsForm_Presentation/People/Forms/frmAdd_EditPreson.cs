@@ -17,9 +17,9 @@ namespace DVLD_WindowsForm_Presentation
 
         public delegate void DataBackEventHandler(object sender, int PersonID);
         public event DataBackEventHandler DataBack;
-        private enum enMode { AddNewPerson = 0, UpdatePerson = 1 }
+        public enum enMode { AddNewPerson = 0, UpdatePerson = 1 }
+        public enum enGendor { Male = 0, Female = 1 }
         private enMode _Mode;
-        private enum enGendor { Male = 0, Female = 1 }
         private int _PersonID = -1;
         private clsPerson _Person;
 
@@ -27,8 +27,6 @@ namespace DVLD_WindowsForm_Presentation
         {
             InitializeComponent();
             _Mode = enMode.AddNewPerson;
-            this.Text = "DVLD - Add New Person";
-            lbl_TitleForm.Text = "Add New Person";
         }
 
         public frmAdd_EditPreson(int PersonID)
@@ -36,8 +34,7 @@ namespace DVLD_WindowsForm_Presentation
             InitializeComponent();
             _PersonID = PersonID;
             _Mode = enMode.UpdatePerson;
-            this.Text = "DVLD - Update Person : " + _PersonID;
-            lbl_TitleForm.Text = "Update Person (" + _PersonID + ")";
+
         }
 
         private void _FillAllCountriesInComboBox()
@@ -62,7 +59,8 @@ namespace DVLD_WindowsForm_Presentation
                 _Person = new clsPerson();
                 
             }
-            else {
+            else
+            {
                 lbl_TitleForm.Text = "Update Person (" + _PersonID + ")";
                 this.Text = "DVLD - Update Person : " + _PersonID;
             }
@@ -76,12 +74,12 @@ namespace DVLD_WindowsForm_Presentation
                 pb_PersonImage.Image = Properties.Resources.Femail;
             }
 
-            llRemoveImage.Visible = false;
+            llRemoveImage.Visible = (pb_PersonImage.ImageLocation != null);
 
-            dtp_DateOfBirth.MaxDate = DateTime.Today.AddYears(-18);
+            dtp_DateOfBirth.MaxDate = DateTime.Now.AddYears(-18);
             dtp_DateOfBirth.Value = dtp_DateOfBirth.MaxDate;
 
-            dtp_DateOfBirth.MinDate = DateTime.Today.AddYears(-100);
+            dtp_DateOfBirth.MinDate = DateTime.Now.AddYears(-100);
 
             cb_Countries.SelectedIndex = cb_Countries.FindString("Syria");
 
@@ -110,18 +108,18 @@ namespace DVLD_WindowsForm_Presentation
                 return;
             }
 
-            lbl_PersonID.Text = _Person._PersonID.ToString();
-            txb_FirstName.Text = _Person._FirstName;
-            txb_SecondName.Text = _Person._SecondName;
-            txb_ThirdName.Text = _Person._ThirdName;
-            txb_LastName.Text = _Person._LastName;
-            txb_NO.Text = _Person._NationalNO;
-            txb_PhoneNumber.Text = _Person._PhoneNumber;
-            dtp_DateOfBirth.Value = _Person._DateOfBirth;
-            txb_Address.Text = _Person._Address;
-            txb_Email.Text = _Person._Email;
+            lbl_PersonID.Text = _Person.PersonID.ToString();
+            txb_FirstName.Text = _Person.FirstName;
+            txb_SecondName.Text = _Person.SecondName;
+            txb_ThirdName.Text = _Person.ThirdName;
+            txb_LastName.Text = _Person.LastName;
+            txb_NO.Text = _Person.NationalNO;
+            txb_PhoneNumber.Text = _Person.Phone;
+            dtp_DateOfBirth.Value = _Person.DateOfBirth;
+            txb_Address.Text = _Person.Address;
+            txb_Email.Text = _Person.Email;
 
-            if (_Person._Gendor == 0)
+            if (_Person.Gendor == 0)
             {
                 rdb_Male.Checked = true;
             }
@@ -130,19 +128,19 @@ namespace DVLD_WindowsForm_Presentation
                 rdb_Female.Checked = true;
             }
 
-            cb_Countries.SelectedIndex = cb_Countries.FindString(_Person.CountryInfo._CountryName);
+            cb_Countries.SelectedIndex = cb_Countries.FindString(_Person.CountryInfo.CountryName);
 
-            if (!string.IsNullOrEmpty(_Person._ImagePath))
+            if (_Person.ImagePath != "")
             {
-                pb_PersonImage.ImageLocation = _Person._ImagePath;
+                pb_PersonImage.ImageLocation = _Person.ImagePath;
                 pb_PersonImage.BackgroundImage = null;
-                llRemoveImage.Visible = (_Person._ImagePath != "");
+                llRemoveImage.Visible = (_Person.ImagePath != "");
             }
             else
             {
                 pb_PersonImage.ImageLocation = null;
 
-                if (_Person._Gendor == 0)
+                if (_Person.Gendor == 0)
                 {
                     pb_PersonImage.BackgroundImage = Properties.Resources.Male;
                 }
@@ -180,7 +178,7 @@ namespace DVLD_WindowsForm_Presentation
         {
 
             if (!this.ValidateChildren()) {
-                MessageBox.Show("Error");
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -188,33 +186,33 @@ namespace DVLD_WindowsForm_Presentation
                 return;
             }
 
-            int NationalityCountryID = clsCountry.Find(cb_Countries.Text)._CountryID;
+            int NationalityCountryID = clsCountry.Find(cb_Countries.Text).CountryID;
 
-            _Person._FirstName = txb_FirstName.Text.Trim();
-            _Person._SecondName = txb_SecondName.Text.Trim();
-            _Person._ThirdName = txb_ThirdName.Text.Trim();
-            _Person._LastName = txb_LastName.Text.Trim();
-            _Person._Address = txb_Address.Text.Trim();
-            _Person._Email = txb_Email.Text.Trim();
-            _Person._DateOfBirth = dtp_DateOfBirth.Value;
-            _Person._PhoneNumber = txb_PhoneNumber.Text.Trim();
-            _Person._NationalNO = txb_NO.Text.Trim();
-            _Person._NationalityCountryID = NationalityCountryID;
+            _Person.FirstName = txb_FirstName.Text.Trim();
+            _Person.SecondName = txb_SecondName.Text.Trim();
+            _Person.ThirdName = txb_ThirdName.Text.Trim();
+            _Person.LastName = txb_LastName.Text.Trim();
+            _Person.Address = txb_Address.Text.Trim();
+            _Person.Email = txb_Email.Text.Trim();
+            _Person.DateOfBirth = dtp_DateOfBirth.Value;
+            _Person.Phone = txb_PhoneNumber.Text.Trim();
+            _Person.NationalNO = txb_NO.Text.Trim();
+            _Person.NationalityCountryID = NationalityCountryID;
 
             if (rdb_Male.Checked)
-                _Person._Gendor = (short)enGendor.Male;
+                _Person.Gendor = (short)enGendor.Male;
             else
-                _Person._Gendor = (short)enGendor.Female;
+                _Person.Gendor = (short)enGendor.Female;
 
 
             if (pb_PersonImage.ImageLocation != null)
-                _Person._ImagePath = pb_PersonImage.ImageLocation;
+                _Person.ImagePath = pb_PersonImage.ImageLocation;
             else
-                _Person._ImagePath = "";
+                _Person.ImagePath = "";
 
             if (_Person.Save())
             {
-                _PersonID = _Person._PersonID;
+                _PersonID = _Person.PersonID;
                 _Mode = enMode.UpdatePerson;
                 this.Text = "DVLD - Update Person : " + _PersonID;
                 lbl_TitleForm.Text = "Update Person (" + _PersonID + ")";
@@ -247,6 +245,7 @@ namespace DVLD_WindowsForm_Presentation
         private void llRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             pb_PersonImage.ImageLocation = null;
+            llRemoveImage.Visible = false;
 
             if (rdb_Male.Checked)
             {
@@ -257,7 +256,6 @@ namespace DVLD_WindowsForm_Presentation
                 pb_PersonImage.Image = Properties.Resources.Femail;
             }
 
-            llRemoveImage.Visible = false;
 
         }
 
@@ -326,32 +324,16 @@ namespace DVLD_WindowsForm_Presentation
                 errorProvider1.SetError(txb_NO, null);
             }
 
-
-            if (_Mode == enMode.AddNewPerson)
+            //Make sure the national number is not used by another person
+            if (txb_NO.Text.Trim() != _Person.NationalNO && clsPerson.IsPersonExist(txb_NO.Text.Trim()))
             {
+                e.Cancel = true;
+                errorProvider1.SetError(txb_NO, "National Number is used for another person!");
 
-                if (clsPerson.IsPersonExists(txb_NO.Text.Trim()))
-                {
-                    e.Cancel = true;
-                    errorProvider1.SetError(txb_NO, "National Number is used for another person!");
-                }
-                else
-                {
-                    errorProvider1.SetError(txb_NO, null);
-                }
             }
             else
             {
-
-                if (txb_NO.Text.Trim().ToLower() != _Person._NationalNO.ToLower() && clsPerson.IsPersonExists(txb_NO.Text.Trim()))
-                {
-                    e.Cancel = true;
-                    errorProvider1.SetError(txb_NO, "National Number is used for another person!");
-                }
-                else
-                {
-                    errorProvider1.SetError(txb_NO, null);
-                }
+                errorProvider1.SetError(txb_NO, null);
             }
         }
     }

@@ -74,7 +74,7 @@
             this.btn_Cansel.Location = new System.Drawing.Point(807, 475);
             this.btn_Cansel.Name = "btn_Cansel";
             this.btn_Cansel.Size = new System.Drawing.Size(75, 23);
-            this.btn_Cansel.TabIndex = 3;
+            this.btn_Cansel.TabIndex = 14;
             this.btn_Cansel.Text = "cansel";
             this.btn_Cansel.UseVisualStyleBackColor = true;
             this.btn_Cansel.Click += new System.EventHandler(this.btn_Cansel_Click);
@@ -84,7 +84,7 @@
             this.btn_Save.Location = new System.Drawing.Point(726, 475);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(75, 23);
-            this.btn_Save.TabIndex = 4;
+            this.btn_Save.TabIndex = 13;
             this.btn_Save.Text = "save";
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
@@ -97,7 +97,7 @@
             this.cb_Countries.Location = new System.Drawing.Point(243, 328);
             this.cb_Countries.Name = "cb_Countries";
             this.cb_Countries.Size = new System.Drawing.Size(200, 29);
-            this.cb_Countries.TabIndex = 42;
+            this.cb_Countries.TabIndex = 10;
             // 
             // txb_Address
             // 
@@ -106,7 +106,7 @@
             this.txb_Address.Multiline = true;
             this.txb_Address.Name = "txb_Address";
             this.txb_Address.Size = new System.Drawing.Size(609, 94);
-            this.txb_Address.TabIndex = 44;
+            this.txb_Address.TabIndex = 11;
             this.txb_Address.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txb_Email
@@ -115,7 +115,7 @@
             this.txb_Email.Location = new System.Drawing.Point(22, 328);
             this.txb_Email.Name = "txb_Email";
             this.txb_Email.Size = new System.Drawing.Size(138, 29);
-            this.txb_Email.TabIndex = 38;
+            this.txb_Email.TabIndex = 9;
             this.txb_Email.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txb_SecondName
@@ -124,7 +124,7 @@
             this.txb_SecondName.Location = new System.Drawing.Point(243, 145);
             this.txb_SecondName.Name = "txb_SecondName";
             this.txb_SecondName.Size = new System.Drawing.Size(138, 29);
-            this.txb_SecondName.TabIndex = 25;
+            this.txb_SecondName.TabIndex = 1;
             this.txb_SecondName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txb_FirstName
@@ -133,7 +133,7 @@
             this.txb_FirstName.Location = new System.Drawing.Point(22, 145);
             this.txb_FirstName.Name = "txb_FirstName";
             this.txb_FirstName.Size = new System.Drawing.Size(138, 29);
-            this.txb_FirstName.TabIndex = 22;
+            this.txb_FirstName.TabIndex = 0;
             this.txb_FirstName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // label11
@@ -155,7 +155,7 @@
             this.rdb_Male.Location = new System.Drawing.Point(23, 265);
             this.rdb_Male.Name = "rdb_Male";
             this.rdb_Male.Size = new System.Drawing.Size(54, 31);
-            this.rdb_Male.TabIndex = 23;
+            this.rdb_Male.TabIndex = 6;
             this.rdb_Male.TabStop = true;
             this.rdb_Male.Text = "Male";
             this.rdb_Male.UseVisualStyleBackColor = true;
@@ -167,8 +167,7 @@
             this.txb_ThirdName.Location = new System.Drawing.Point(493, 145);
             this.txb_ThirdName.Name = "txb_ThirdName";
             this.txb_ThirdName.Size = new System.Drawing.Size(138, 29);
-            this.txb_ThirdName.TabIndex = 28;
-            this.txb_ThirdName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
+            this.txb_ThirdName.TabIndex = 2;
             // 
             // rdb_Female
             // 
@@ -178,7 +177,7 @@
             this.rdb_Female.Location = new System.Drawing.Point(96, 265);
             this.rdb_Female.Name = "rdb_Female";
             this.rdb_Female.Size = new System.Drawing.Size(67, 31);
-            this.rdb_Female.TabIndex = 26;
+            this.rdb_Female.TabIndex = 7;
             this.rdb_Female.TabStop = true;
             this.rdb_Female.Text = "Female";
             this.rdb_Female.UseVisualStyleBackColor = true;
@@ -191,7 +190,7 @@
             this.dtp_DateOfBirth.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
             this.dtp_DateOfBirth.Name = "dtp_DateOfBirth";
             this.dtp_DateOfBirth.Size = new System.Drawing.Size(200, 20);
-            this.dtp_DateOfBirth.TabIndex = 34;
+            this.dtp_DateOfBirth.TabIndex = 5;
             this.dtp_DateOfBirth.Value = new System.DateTime(2006, 12, 31, 0, 0, 0, 0);
             // 
             // txb_PhoneNumber
@@ -200,7 +199,7 @@
             this.txb_PhoneNumber.Location = new System.Drawing.Point(243, 267);
             this.txb_PhoneNumber.Name = "txb_PhoneNumber";
             this.txb_PhoneNumber.Size = new System.Drawing.Size(138, 29);
-            this.txb_PhoneNumber.TabIndex = 37;
+            this.txb_PhoneNumber.TabIndex = 8;
             this.txb_PhoneNumber.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txb_NO
@@ -209,7 +208,7 @@
             this.txb_NO.Location = new System.Drawing.Point(22, 206);
             this.txb_NO.Name = "txb_NO";
             this.txb_NO.Size = new System.Drawing.Size(138, 29);
-            this.txb_NO.TabIndex = 32;
+            this.txb_NO.TabIndex = 4;
             this.txb_NO.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalNo_Validating);
             // 
             // txb_LastName
@@ -218,7 +217,7 @@
             this.txb_LastName.Location = new System.Drawing.Point(723, 145);
             this.txb_LastName.Name = "txb_LastName";
             this.txb_LastName.Size = new System.Drawing.Size(138, 29);
-            this.txb_LastName.TabIndex = 29;
+            this.txb_LastName.TabIndex = 3;
             this.txb_LastName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // label12
@@ -402,7 +401,7 @@
             this.llSetImage.Location = new System.Drawing.Point(808, 372);
             this.llSetImage.Name = "llSetImage";
             this.llSetImage.Size = new System.Drawing.Size(53, 13);
-            this.llSetImage.TabIndex = 50;
+            this.llSetImage.TabIndex = 12;
             this.llSetImage.TabStop = true;
             this.llSetImage.Text = "set image";
             this.llSetImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llSetImage_LinkClicked);
