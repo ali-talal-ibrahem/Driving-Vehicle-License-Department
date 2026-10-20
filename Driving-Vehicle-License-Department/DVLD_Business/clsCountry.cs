@@ -7,18 +7,18 @@ namespace DVLD_Business
     public class clsCountry
     {
 
-        public string _CountryName { get; set; }
-        public int _CountryID { get; set; }
+        public int CountryID { get; set; }
+        public string CountryName { get; set; }
 
         clsCountry() {
-            _CountryID = -1;
-            _CountryName = "";
+            this.CountryID = -1;
+            this.CountryName = "";
         }
 
         clsCountry(int CountryID, string CountryName)
         {
-            _CountryID = CountryID;
-            _CountryName = CountryName;
+            this.CountryID = CountryID;
+            this.CountryName = CountryName;
         }
 
         public static clsCountry Find(int CountryID)
