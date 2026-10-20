@@ -6,7 +6,6 @@ namespace DVLD_DataAccess
 {
     public class clsPersonData
     {
-
         public static bool GetPerosnInfoByID(int PersonID, ref string FirstName, ref string SecondName, ref string ThirdName,
             ref string LastName, ref string NationalNO, ref string Phone, ref string Email, ref string Address,
             ref int NationalityCountryID, ref short Gendor, ref DateTime DateOfBirth, ref string ImagePath) 
@@ -87,7 +86,6 @@ namespace DVLD_DataAccess
 
             return isFound;
         }
-
         public static bool GetPerosnInfoByNationalNO(string NationalNO, ref int PersonID, ref string FirstName, ref string SecondName, ref string ThirdName,
            ref string LastName, ref string Phone, ref string Email, ref string Address,
            ref int NationalityCountryID, ref short Gendor, ref DateTime DateOfBirth, ref string ImagePath)
@@ -171,20 +169,13 @@ namespace DVLD_DataAccess
 
             return isFound;
         }
-
-        public static int AddNewPerson(string FirstName , string SecondName ,  string ThirdName,
-            string LastName,  string Phone,  string Email,  string Address,
-            int NationalityCountryID,  short Gendor,  DateTime DateOfBirth,  string ImagePath) 
+        public static int AddNewPerson(string NationalNo , string FirstName , string SecondName , string ThirdName , string LastName , DateTime DateOfBirth , short Gendor , string Address , string Phone , string Email , int NationalityCountryID , string ImagePath) 
         {
             int PersonID = -1;
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = @"INSERT INTO People (FirstName , SecondName , ThirdName , LastName , Phone , Email
-                             Address , NationalityCountryID , Gendor , DateOfBirth , ImagePath)
-                            VALUES (@FirstName , @SecondName , @ThirdName , @LastName , @Phone , @Email
-                             @Address , @NationalityCountryID , @Gendor , @DateOfBirth , @ImagePath) 
-                              SELECT SCOPE_IDENTITY();";
+            string query = @"INSERT INTO People (NationalNo ,FirstName ,SecondName ,ThirdName ,LastName ,DateOfBirth ,Gendor ,Address ,Phone ,Email ,NationalityCountryID ,ImagePath) VALUES (@NationalNo ,@FirstName ,@SecondName ,@ThirdName ,@LastName ,@DateOfBirth ,@Gendor ,@Address ,@Phone ,@Email ,@NationalityCountryID ,@ImagePath) SELECT SCOPE_IDENTITY()";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -200,6 +191,7 @@ namespace DVLD_DataAccess
             }
 
             command.Parameters.AddWithValue("@LastName", LastName);
+            command.Parameters.AddWithValue("@NationalNo", NationalNo);
             command.Parameters.AddWithValue("@Phone", Phone);
             command.Parameters.AddWithValue("@Address", Address);
 
@@ -249,31 +241,16 @@ namespace DVLD_DataAccess
 
             return PersonID;
         }
-
-        public static bool UpdatePerson(int PersonID, string FirstName, string SecondName, string ThirdName,
-            string LastName, string Phone, string Email, string Address,
-            int NationalityCountryID, short Gendor, DateTime DateOfBirth, string ImagePath)
+        public static bool UpdatePerson(int PersonID,string NationalNo, string FirstName, string SecondName, string ThirdName, string LastName, DateTime DateOfBirth, short Gendor, string Address, string Phone, string Email, int NationalityCountryID, string ImagePath)
         {
             int rowEffected = 0;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = @"UPDATE People
-                            SET FirstName = @FirstName,
-                                LastName = @LastName,
-                                ThirdName = @ThirdName,
-                                SecondName = @SecondName,
-                                Phone = @Phone,
-                                Email = @Email,
-                                Address = @Address,
-                                NationalityCountryID = @NationalityCountryID,
-                                Gendor = @Gendor,
-                                DateOfBirth = @DateOfBirth,
-                                ImagePath = @ImagePath,
-                            Where PersonID = @PersonID;"
-                                ;
+            string query = @"Update People SET NationalNo = @NationalNo ,FirstName = @FirstName ,SecondName = @SecondName ,ThirdName = @ThirdName ,LastName = @LastName ,DateOfBirth = @DateOfBirth ,Gendor = @Gendor ,Address = @Address ,Phone ,Email = @Email ,NationalityCountryID = @NationalityCountryID ,ImagePath = @ImagePath WHERE PersonID = @PersonID";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@PersonID", PersonID);
+            command.Parameters.AddWithValue("@NationalNo", NationalNo);
             command.Parameters.AddWithValue("@FirstName", FirstName);
             command.Parameters.AddWithValue("@SecondName", SecondName);
 
@@ -332,7 +309,6 @@ namespace DVLD_DataAccess
 
             return (rowEffected > 0);
         }
-
         public static bool DeletePerson(int PersonID) {
 
             int rowsAffected = 0;
@@ -448,7 +424,7 @@ namespace DVLD_DataAccess
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "SELECT Found = 1 WHERE From People LOWER(NationalNo) = LOWER(@NationalNO)";
+            string query = "SELECT Found = 1 From People WHERE LOWER(NationalNo) = LOWER(@NationalNO)";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@NationalNO", NationalNO);
@@ -476,7 +452,5 @@ namespace DVLD_DataAccess
 
             return isFound;
         }
-    
-    
     }
 }
